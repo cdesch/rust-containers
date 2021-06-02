@@ -32,5 +32,10 @@
 	// "postCreateCommand": "rustc --version",
 
 	// Comment out to run as root instead.
-	"remoteUser": "vscode"
+	"remoteUser": "vscode",
+	"containerEnv": {
+	    "HTTP_PROXY": "${localEnv:HTTP_PROXY}",
+	    "HTTPS_PROXY": "${localEnv:HTTPS_PROXY}",
+	    "NO_PROXY": "${localEnv:NO_PROXY}"
+	}
 }
